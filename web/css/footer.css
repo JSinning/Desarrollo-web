@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.autores{
+    float: left;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 30px; 
+}
+.autores samp{
+    float: left;
+    font-family: 'Noto Serif JP', sans-serif;
+}
+.redes-sociales{
+  float: right;
+  margin-top: 30px;  
+}
+.redes-sociales li{
+    float: left;
+    padding: 5px;
+}
+.redes-sociales a{
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+
+}
+.redes-sociales a:hover{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 3vh;
+    font-family: 'Roboto Mono', monospace;
+}

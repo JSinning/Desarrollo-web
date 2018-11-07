@@ -1,0 +1,17 @@
+#buscar{
+    display: none;
+    
+}
+
+.buscar-bar{
+    float: right;
+    color: #000;
+    position: relative;
+    top: 36px;
+    font-size: 15px;
+}
+.buscar-bar label{
+    cursor: pointer;
+    font-size: 28px;
+    margin: 6px 0px;
+}

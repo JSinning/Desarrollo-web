@@ -1,0 +1,62 @@
+#banner{
+    margin-top: 50px;
+    position: relative;
+}
+
+#banner img{
+    width: 100%;
+    height: 100%;
+}
+
+#banner .session{
+    position: absolute;
+    height: 200px;
+    width: 350px;
+    left: 50%;
+    top: 48%;
+    margin-top: -100px;
+    margin-left: -150px;
+    color: #fff;
+}
+
+#banner .session form{
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    background: rgba(51, 51, 51, 0.5);
+    padding: 30px;
+    border: 1px solid rgba(51, 51, 51, 0.9);
+}
+
+#banner .session h2{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 28px;
+    color: #FFFFFF;
+    
+}
+
+#banner .session input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+#banner .session input[type="submit"]{
+    background: #777776;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 28px; 
+    margin-bottom: 0;
+}
+
+#banner .session input[type="submit"]:hover{
+    background: rgba(189, 189, 190, 0.7);
+}
+
+#banner .session input[type="submit"]:active{
+    transform: scale(0.9);
+}

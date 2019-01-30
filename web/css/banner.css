@@ -8,7 +8,7 @@
     height: 100%;
 }
 
-#banner .session{
+#banner #contenido{
     position: absolute;
     height: 200px;
     width: 350px;
@@ -19,7 +19,7 @@
     color: #fff;
 }
 
-#banner .session form{
+#banner #contenido form{
     margin: auto;
     width: 90%;
     max-width: 500px;
@@ -28,7 +28,7 @@
     border: 1px solid rgba(51, 51, 51, 0.9);
 }
 
-#banner .session h2{
+#banner #contenido h2{
     text-align: center;
     font-size: 28px;
     margin-bottom: 28px;
@@ -36,7 +36,7 @@
     
 }
 
-#banner .session input{
+#banner #contenido input{
     display: block;
     padding: 10px;
     width: 100%;
@@ -44,7 +44,7 @@
     font-size: 20px;
 }
 
-#banner .session input[type="submit"]{
+#banner #contenido input[type="submit"]{
     background: #777776;
     border: 0;
     color: #fff;
@@ -53,10 +53,29 @@
     margin-bottom: 0;
 }
 
-#banner .session input[type="submit"]:hover{
+#banner #contenido input[type="submit"]:hover{
     background: rgba(189, 189, 190, 0.7);
 }
 
-#banner .session input[type="submit"]:active{
+#banner #contenido input[type="submit"]:active{
     transform: scale(0.9);
+}
+#banner #contenido select{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#banner #contenido table{
+    display: block;
+    padding: 10px;
+    width: 150%;
+    margin: 30px 0;
+    font-size: 20px;    
+    cursor: pointer;
+    border: 1px solid rgba(51, 51, 51, 0.9);
+    background: rgba(51, 51, 51, 0.5);
 }

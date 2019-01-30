@@ -15,3 +15,24 @@
     font-size: 28px;
     margin: 6px 0px;
 }
+.buscar-menu {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    height: 75vh;
+    width: 19%;
+    background: rgba(51, 51,51, 0.7);
+   
+}
+.buscar-menu a{
+    display: block;
+    color: #FFF;
+    height: 0px;
+    text-decoration: none;
+    padding: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+}
+.buscar-menu a:hover{
+    background: rgba(255, 255, 255, 0.3);
+}

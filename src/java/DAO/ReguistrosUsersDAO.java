@@ -24,7 +24,7 @@ public class ReguistrosUsersDAO {
             return true;
         } else {
             return false;
-        }
+}
     }
 
     //verifica si exite alguien en la lista;

@@ -21,7 +21,7 @@ public class roles implements Iroles{
       boolean registrarRoles = false;
         Statement sta = null;
         Connection con = null;
-        String sql = "INSERT INTO public.roles VALUES ( NULL ,'"+roles.getRol()+"');";
+        String sql = "INSERT INTO public.roles VALUES ('"+roles.getRol()+"');";
         try {
            con = conex.getConexion();
            sta = con.createStatement();

@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author castañosinning
  */
-public interface users {
+public interface Iusers {
 
     public boolean registrar(Users usurios);
 

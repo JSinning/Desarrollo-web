@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author castañosinning
  */
-public interface roles {
+public interface Iroles {
 
     public boolean registrar(Roles roles);
 

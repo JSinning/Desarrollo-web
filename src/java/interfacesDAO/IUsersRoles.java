@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author castañosinning
  */
-public interface UsersRoles {
+public interface IUsersRoles {
  public boolean registrar(usersRoles informacion);
 
     public List<usersRoles> obtener();

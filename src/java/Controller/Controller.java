@@ -5,7 +5,6 @@
  */
 package Controller;
 
-import DAO.ReguistrosUsersDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -18,7 +17,6 @@ import javax.servlet.http.HttpServletResponse;
  * @author castañosinning
  */
 public class Controller extends HttpServlet {
-    ReguistrosUsersDAO usurios = new ReguistrosUsersDAO();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -79,13 +77,13 @@ public class Controller extends HttpServlet {
     }// </editor-fold>
 
     public void auten(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String Pass = request.getParameter("password");
+       /* String Pass = request.getParameter("password");
         String nom = request.getParameter("usuario");
         //     PrintWriter out = response.getWriter();
         if (usurios.validarUsers(nom ,Pass ) == true) {
             response.sendRedirect("codigo.jsp");
         } else {
             response.sendRedirect("index.html");
-        }
+        }*/
     }
 }

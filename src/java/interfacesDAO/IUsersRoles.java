@@ -1,6 +1,7 @@
 package interfacesDAO;
 
 //import de clases del modelo
+import MODEL.Users;
 import MODEL.usersRoles;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  * @author castañosinning
  */
 public interface IUsersRoles {
- public boolean registrar(usersRoles informacion);
+ public boolean registrar(Users informacion);
 
     public List<usersRoles> obtener();
 

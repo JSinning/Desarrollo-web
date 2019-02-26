@@ -1,8 +1,12 @@
 
 package DAO;
 
+import Conexion.conex;
 import MODEL.Roles;
 import interfacesDAO.Iroles;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 /**
@@ -13,7 +17,21 @@ public class roles implements Iroles{
 
     @Override
     public boolean registrar(Roles roles) {
-       return false;
+        
+      boolean registrarRoles = false;
+        Statement sta = null;
+        Connection con = null;
+        String sql = "INSERT INTO public.roles VALUES ( NULL ,'"+roles.getRol()+"');";
+        try {
+           con = conex.getConexion();
+           sta = con.createStatement();
+           sta.execute(sql);
+           registrarRoles = true;
+           sta.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+       return registrarRoles;
     }
 
     @Override

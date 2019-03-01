@@ -5,6 +5,9 @@
  */
 package Controller;
 
+import DAO.users;
+import interfacesDAO.Iusers;
+import MODEL.Users;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -77,13 +80,17 @@ public class Controller extends HttpServlet {
     }// </editor-fold>
 
     public void auten(HttpServletRequest request, HttpServletResponse response) throws IOException {
-       /* String Pass = request.getParameter("password");
+        String Pass = request.getParameter("password");
         String nom = request.getParameter("usuario");
         //     PrintWriter out = response.getWriter();
-        if (usurios.validarUsers(nom ,Pass ) == true) {
+        Users U = new Users(nom, Pass);
+        Iusers DAOU = new users();
+        if(DAOU.validarInicioSeccion(U) == true){
             response.sendRedirect("codigo.jsp");
-        } else {
+        }else{
             response.sendRedirect("index.html");
-        }*/
+        }
+        
+        
     }
 }

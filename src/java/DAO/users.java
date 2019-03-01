@@ -15,11 +15,11 @@ import java.util.List;
 public class users implements Iusers{
 
     @Override
-    public boolean registrar(Users usurios) {
+    public boolean registrar(Users usuarios) {
         boolean registrarUse = false;
         Statement sta = null;
         Connection con = null;
-        String sql = "INSERT INTO public.users(username, password) VALUES ('"+usurios.getUsername()+"', '"+usurios.getPassword()+"');";
+        String sql = "INSERT INTO public.users(username, password) VALUES ('"+usuarios.getUsername()+"', '"+usuarios.getPassword()+"');";
         try {
            con = conex.getConexion();
            sta = con.createStatement();
@@ -45,6 +45,23 @@ public class users implements Iusers{
     @Override
     public boolean eliminar(Users usuario) {
         return false;
+    }
+
+    @Override
+    public boolean validarInicioSeccion(Users usuarios) {
+         boolean VeriaficarUsuario = false;
+        Statement sta = null;
+        Connection con = null;
+        String sql = "SELECT * FROM public.users WHERE username='"+usuarios.getUsername()+"' AND password='"+usuarios.getPassword()+"';";
+        try {
+            con = conex.getConexion();
+            sta = con.createStatement();
+            sta.execute(sql);
+            VeriaficarUsuario = true;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return VeriaficarUsuario;
     }
     
     

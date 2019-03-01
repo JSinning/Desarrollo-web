@@ -9,8 +9,9 @@ import java.util.List;
  * @author castañosinning
  */
 public interface Iusers {
+    public boolean validarInicioSeccion(Users usuarios);
 
-    public boolean registrar(Users usurios);
+    public boolean registrar(Users usuarios);
 
     public List<Users> obtener();
 

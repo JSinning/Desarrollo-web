@@ -5,7 +5,7 @@ import MODEL.Users;
 import MODEL.usersRoles;
 import interfacesDAO.IUsersRoles;
 import java.sql.Connection;
-import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
@@ -17,7 +17,20 @@ public class userRoles implements IUsersRoles{
 
     @Override
     public boolean registrar(Users informacion) {
-        return false;
+        boolean registroInformacion = false;
+        Statement sta = null;
+        Connection con = null;
+        String sql ="INSERT INTO public.users_roles(user_name)VALUES ('"+informacion.getUsername()+"');');";
+        try {
+            con = conex.getConexion();
+            sta = con.createStatement();
+            sta.execute(sql);
+            registroInformacion = true;
+            sta.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return registroInformacion;
     }
 
     @Override

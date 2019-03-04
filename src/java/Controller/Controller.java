@@ -5,9 +5,15 @@
  */
 package Controller;
 
+import DAO.roles;
+import DAO.userRoles;
 import DAO.users;
+import MODEL.Roles;
 import interfacesDAO.Iusers;
 import MODEL.Users;
+import MODEL.usersRoles;
+import interfacesDAO.IUsersRoles;
+import interfacesDAO.Iroles;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -36,6 +42,9 @@ public class Controller extends HttpServlet {
         String accion = request.getRequestURL().substring(request.getRequestURL().lastIndexOf("/") + 1);
         if (accion.equals("auto.do")) {
             auten(request, response);
+        }
+        if (accion.equals("registar.do")) {
+            registarUsers(request, response);
         }
 
     }
@@ -90,7 +99,25 @@ public class Controller extends HttpServlet {
         }else{
             response.sendRedirect("index.html");
         }
-        
+    }
+    public void registarUsers(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        String passUser = request.getParameter("pass");
+        String nombreUSer = request.getParameter("nombre");
+        String rolUser = request.getParameter("rol");
+        //PrintWriter out = response.getWriter();
+         Users U = new Users(nombreUSer, passUser);
+         Roles R = new Roles(rolUser);
+         usersRoles UR = new usersRoles(nombreUSer);
+         Iusers DAOU = new users();
+         Iroles DAOR = new roles();
+         IUsersRoles DAOUR = new userRoles();
+         if(DAOU.registrar(U)==true && DAOR.registrar(R)==true && DAOUR.registrar(UR)==true)
+         {
+             System.out.println("true");
+         }else{
+             System.err.println("flase");
+         }
+             
         
     }
 }

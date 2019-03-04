@@ -10,7 +10,7 @@ import java.util.List;
  * @author castañosinning
  */
 public interface IUsersRoles {
- public boolean registrar(Users informacion);
+ public boolean registrar(usersRoles informacion);
 
     public List<usersRoles> obtener();
 

@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <form action="#">
+   <form  method="POST">
         <h2>CREAR USUARIOS</h2>
         <input type="text" id="usuario" name="usuario"  placeholder="NOMBRE DE USURIO"/>
         <input type="password" id="contraseña" name="password" placeholder="PASSWORD"/>
@@ -15,7 +6,29 @@
                 <option selected >ADMINITRADOR</option>
                 <option> OPERARIO </option>
                 </select>
-        <input type="submit" value="Iniciar" class="Iniciar"/>
+        <input type="submit" value="Iniciar" id="btnregis" class="Iniciar"/>
     </form>
-</body>
-</html>
+<script>
+    $(document).ready(function (){
+    $('#btnregis').click(function (){
+        var nomUser=document.getElementById("usuario").value;
+        var passUser=document.getElementById("contraseña").value;
+        var rolUser=document.getElementById("rol").value;
+        $.ajax({
+          type: 'POST',
+            data: {
+                nombre:nomUser,
+                pass:passUser,
+                rol:rolUser
+            },
+            url: "registar.do",
+            success: function (datos) {
+                console.log(datos);
+                alert("Se a registrado el usurio exitosamen");
+            }
+        });
+        return false;
+    });
+});
+
+</script>

@@ -82,5 +82,6 @@
         <script src="js/jquery.js"></script>
         <!--Validacion-->
         <script src="js/routs.js"></script>
+        <script src="js/Informacion.js"></script>
     </body>
 </html>
